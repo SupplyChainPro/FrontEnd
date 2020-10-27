@@ -1,0 +1,121 @@
+<head>
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> 
+
+
+<script >
+        function validate() {
+            var username = document.forms["myForm"]["U_name"].value;
+            var pname = document.forms["myForm"]["P_name"].value;
+            var cname = document.forms["myForm"]["C_name"].value;
+            var gname = document.forms["myForm"]["G_name"].value;
+            if (username == null ) {
+                alert("Please enter the valid Product Id.");
+                return false;
+            }
+           if (pname == null ) {
+                alert("Please enter the valid Product Name.");
+                return false;
+            }
+            if (cname == null ) {
+                alert("Please enter the valid Product Cost.");
+                return false;
+            }
+            alert('Product added successfully');
+            
+
+        }
+</script>
+</head>
+
+
+
+<!-- Header Menu of the Page -->
+<header>
+         
+    <div id="top-header">
+             
+        <!-- Logo -->
+        <div id="logo">
+            <p style="font-size:30px; color:black; text-align:left"> Supply Chain Management </p>
+        </div>    
+                 
+        <!-- Navigation Menu -->
+        <nav>
+          <div id="menu">
+            <ul>
+		<li><a href="Home_Page.html" target="_self">Home</a></li>
+		<li><a href="Home_Page.html" target="_self">Log Out</a></li>
+		<li class="active"><a href="#">About Us</a></li>
+	</ul>
+          </div> 
+        </nav>
+    </div>    
+ 
+    <div id="header-image-menu">
+ 
+    </div>
+</header>
+
+<main> 
+    <!-- Section 1 of Main content -->
+    <section> 
+        <div id="welcome"> 
+            <h1 class="title">Supply Page</h1> 
+                                          
+            <h2> 
+               Add Products <br> 
+            </h2> 
+        </div>           
+    </section> 
+    
+    <!-- Section 2 of Main content -->
+    <section> 
+             <section class="container" id="section-2"> 
+    <div class="row"> 
+        <div id="column1"> 
+            <div class="column-title"> 
+                <h2>Provide Product Details<br> 
+                </h2> <br>
+            </div> 
+           <form name = "myForm">
+    		
+    		<label for="Name"  ><b style="font-size:17px">Product ID</b></label> <br><br>
+    				
+    		<input size="30" type="text" placeholder="Enter Product Id " name="U_name" required><br><br>
+    						
+		<label for="Name"  ><b style="font-size:17px">Product Name</b></label><br><br>
+    				
+    		<input size="30" type="text" placeholder="Enter Product Name " name="P_name" required><br><br>
+    						
+		<label for="Name"  ><b style="font-size:17px">Product Cost</b></label><br><br>
+    				
+    		<input size="30" type="number" placeholder="Enter Cost" name="C_name" required><br><br>
+    		
+    		<label for="Name"  ><b style="font-size:17px">Product Details</b></label><br><br>
+    				
+    		<input size="30" type="text" placeholder="Enter Product Details" name="G_name" required><br><br>
+    		
+    		 <button type="submit" class="button" formaction="" onclick="return validate()" >Add Product</button>
+    						    				             
+        </div> 
+                  
+        <div id="column2"> 
+            <div class="column-title"> 
+                <h2>Rules</h2> 
+            </div> 
+                      
+            <p> 
+               <h3><b> Add Genuine Products Only!!! </b></h3><br><br>
+               
+               Product Details Should Contain <br>                   
+                   - Box Contains <br>
+                   - Appearance<br>
+                   - Category of Product    <br>    
+               
+            </p> 
+         
+           
+        </div>        
+    </section> 
+</main> 

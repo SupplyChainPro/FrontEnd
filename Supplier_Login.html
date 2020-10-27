@@ -1,0 +1,48 @@
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+<script >
+        function validate() {
+            var username = document.forms["myForm"]["U_name"].value;
+            var password = document.forms["myForm"]["Pass"].value;
+            if (username == null || username != "supplier") {
+                alert("Please enter the valid username.");
+                return false;
+            }
+            if (password == null || password != "12345") {
+                alert("Please enter the valid password.");
+                return false;
+            }
+            alert('Login successful');
+
+        }
+</script>
+
+</head>
+<form name = "myForm">
+  	<div  >
+		    <h1>Supplier Login Details</h1>
+
+		    <hr><br /><p2></p2>
+		    
+		    <label for="Name"  ><b style="font-size:20px">Supplier UserName</b></label>
+		
+			<br /><br /><p2></p2>
+			
+		    <input size="30" type="text" placeholder="Enter  User Name " name="U_name" required>
+			
+			<br /><br /><br /><br /><p2></p2>
+			
+		    <label for="id"><b style="font-size:20px">Password</b></label>
+		
+			<br /><br /><p2></p2>
+		
+		    <input size="30" type="password" placeholder="Enter your  Password" name="Pass" required>
+			
+			<br /><br /><br /><br /><p2></p2><p2></p2>
+		
+		    <button type="submit" class="button" formaction="Product.html"  onclick="return validate()" >Login</button>
+			<P></P>
+  	</div>
+</form>
